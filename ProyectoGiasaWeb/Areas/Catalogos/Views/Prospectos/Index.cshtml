@@ -1,0 +1,72 @@
+﻿@model IEnumerable<ProyectoGiasaWeb.Models.Prospectos>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<h2>Catalogo Prospectos</h2>
+<hr />
+<p>
+    <a asp-action="Create" class="btn btn-primary">Nuevo Prospecto</a>
+</p>
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nombrepros)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ap_materno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ap_paterno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.correo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.empresa)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nombrepros)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ap_materno)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ap_paterno)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.direccion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.correo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.empresa)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.idProspecto" class="btn btn-outline-primary">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.idProspecto" class="btn btn-outline-info">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@item.idProspecto" class="btn btn-outline-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div>
+    <div>
+        <a asp-action="Regresa" class="btn btn-primary"> Atras</a>
+    </div>
+</div>

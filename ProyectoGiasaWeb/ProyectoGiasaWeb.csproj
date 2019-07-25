@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>aspnet-ProyectoGiasaWeb-0C24F7F4-9F2F-4BA8-B8E3-E9554E6BC798</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Catalogos\Data\" />
+    <Folder Include="Areas\Catalogos\Models\" />
+    <Folder Include="Areas\Cotizacion\Controllers\" />
+    <Folder Include="Areas\Cotizacion\Data\" />
+    <Folder Include="Areas\Cotizacion\Models\" />
+    <Folder Include="Areas\Cotizacion\Views\" />
+    <Folder Include="Areas\Materiales\Data\" />
+    <Folder Include="Areas\Materiales\Models\" />
+    <Folder Include="Areas\Principal\Data\" />
+    <Folder Include="Areas\Principal\Models\" />
+    <Folder Include="Areas\Usuarios\Data\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Areas\Catalogos\Views\_ViewImports.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Areas\Materiales\Views\_ViewImports.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
+</Project>

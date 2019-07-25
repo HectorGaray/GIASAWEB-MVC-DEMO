@@ -1,0 +1,72 @@
+﻿@model ProyectoGiasaWeb.Models.Mano_obra
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<h2>Editar Mano De Obra</h2>
+
+<h4>Mano_obra</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="idmano" />
+            <div class="form-group">
+                <label asp-for="minDiseno" class="control-label"></label>
+                <input asp-for="minDiseno" class="form-control" />
+                <span asp-validation-for="minDiseno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="costoDiseño" class="control-label"></label>
+                <input asp-for="costoDiseño" class="form-control" />
+                <span asp-validation-for="costoDiseño" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="minPrensa" class="control-label"></label>
+                <input asp-for="minPrensa" class="form-control" />
+                <span asp-validation-for="minPrensa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="costoPren" class="control-label"></label>
+                <input asp-for="costoPren" class="form-control" />
+                <span asp-validation-for="costoPren" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="minFoliador" class="control-label"></label>
+                <input asp-for="minFoliador" class="form-control" />
+                <span asp-validation-for="minFoliador" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="minterminado" class="control-label"></label>
+                <input asp-for="minterminado" class="form-control" />
+                <span asp-validation-for="minterminado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="costoFolio" class="control-label"></label>
+                <input asp-for="costoFolio" class="form-control" />
+                <span asp-validation-for="costoFolio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="costoTerminado" class="control-label"></label>
+                <input asp-for="costoTerminado" class="form-control" />
+                <span asp-validation-for="costoTerminado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="subtotal" class="control-label"></label>
+                <input asp-for="subtotal" class="form-control" />
+                <span asp-validation-for="subtotal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-primary">Regresar A La Lista</a>
+</div>
+

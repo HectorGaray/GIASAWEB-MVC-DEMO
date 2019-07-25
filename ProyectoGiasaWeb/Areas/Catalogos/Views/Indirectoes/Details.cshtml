@@ -1,0 +1,61 @@
+﻿@model ProyectoGiasaWeb.Models.Indirecto
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<h2>Detalles De Indirecto</h2>
+
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.horas)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.horas)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.minutos)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.minutos)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.importe)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.importe)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.subtotalP)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.subtotalP)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.insumoV)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.insumoV)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.materialV)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.materialV)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.subtotalV)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.subtotalV)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.idIndirecto" class="btn btn-info">Editar</a> |
+    <a asp-action="Index" class="btn btn-primary">Regresar A La Lista</a>
+</div>

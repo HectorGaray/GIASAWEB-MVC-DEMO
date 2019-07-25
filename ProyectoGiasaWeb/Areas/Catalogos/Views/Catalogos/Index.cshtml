@@ -1,0 +1,84 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+
+<center><h2>Catalogos</h2></center>
+
+
+
+<div class="row">
+    <div class="col">
+        <div class="card border-dark mb-3" style="max-width: 18rem;">
+            <div class="card-header"><center><h5>Listado de Prospectos</h5></center></div>
+            <div class="card-body text-dark">
+                <h5 class="card-title">Prospectos</h5>
+                <p class="card-text">Agregar, Actualiza,Visualiza o Elimina un prospecto</p>
+                <a asp-area="Catalogos" asp-controller="Prospectos" asp-action="Index" class="btn btn-primary btn-lg btn-block">Ver Listado</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card border-dark mb-3" style="max-width: 18rem;">
+            <div class="card-header"><center><h5>Listado de Indirectos </h5></center></div>
+            <div class="card-body text-dark">
+                <h5 class="card-title">Indirectos</h5>
+                <p class="card-text">Agregar, Actualiza,Visualiza o Elimina Un Indirecto</p>
+                <a asp-area="Catalogos" asp-controller="Indirectoes" asp-action="Index" class="btn btn-primary btn-lg btn-block">Ver Listado</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card border-dark mb-3" style="max-width: 18rem;">
+            <div class="card-header"><center><h5>Listado de Maquila</h5></center></div>
+            <div class="card-body text-dark">
+                <h5 class="card-title">Maquilas</h5>
+                <p class="card-text">Agrega, Actualiza,Visualiza o Elimina Una Maquila</p>
+                <a asp-area="Catalogos" asp-controller="Maquilas" asp-action="Index" class="btn btn-primary btn-lg btn-block">Ver Listado</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col">
+        <div class="card border-dark mb-3" style="max-width: 18rem;">
+            <div class="card-header"><center><h5>Mano De Obra</h5></center></div>
+            <div class="card-body text-dark">
+                <h5 class="card-title">Prospectos</h5>
+                <p class="card-text">Agrega, Actualiza,Visualiza una Mano de Obra</p>
+                <a asp-area="Catalogos" asp-controller="Mano_obra" asp-action="Index" class="btn btn-primary btn-lg btn-block">Ver Listado</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card border-dark mb-3" style="max-width: 18rem;">
+            <div class="card-header"><center><h5>Listado de Tintas</h5></center></div>
+            <div class="card-body text-dark">
+                <h5 class="card-title">Tintas</h5>
+                <p class="card-text">Agrega, Actualiza,Visualiza o Elimina una tinta</p>
+                <a asp-area="Catalogos" asp-controller="Cat_tinta" asp-action="Index" class="btn btn-primary btn-lg btn-block">Ver Listado</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card border-dark mb-3" style="max-width: 18rem;">
+            <div class="card-header"><center><h5>Listado de Insumos</h5></center></div>
+            <div class="card-body text-dark">
+                <h5 class="card-title">Prospectos</h5>
+                <p class="card-text">Agrega, Actualiza,Visualiza o Elimina un Insumo</p>
+                <a asp-area="Catalogos" asp-controller="CatInsumoes" asp-action="Index" class="btn btn-primary btn-lg btn-block">Ver Listado</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

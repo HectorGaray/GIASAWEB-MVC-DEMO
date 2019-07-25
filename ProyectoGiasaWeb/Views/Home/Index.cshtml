@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+@model LoginViewModels
+
+<center >
+    <div class="cuadro">
+        <img src="~/images/GIASA2_Mesa de trabajo 1.png" width="200" height="180" class="img-thumbnail">
+        <div class="row">
+            <div class="col-md-12">
+                <section>
+                    <form asp-controller="home" asp-action="Index" method="post">
+                        <h2>Iniciar Sesion</h2>
+
+                        <div class="form-group text-left">
+                            <label asp-for="input.Email">Correo</label>
+                            <input asp-for="input.Email" class="form-control" />
+                            <span asp-validation-for="input.Email" class="text-danger"></span>
+
+                        </div>
+
+                        <div class="form-group text-left">
+                            <label asp-for="input.Password">Contraseña</label>
+                            <input asp-for="input.Password" class="form-control" />
+                            <span asp-validation-for="input.Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" id="btnLogin" class="btn btn-primary btn-lg"> Iniciar Sesion</button>
+                        </div>
+                    </form>
+                    <label id="indexMessage" class="error">@Html.DisplayFor(m => m.ErroMessage)</label>
+                </section>
+            </div>
+
+        </div>
+
+    </div>
+
+</center>
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

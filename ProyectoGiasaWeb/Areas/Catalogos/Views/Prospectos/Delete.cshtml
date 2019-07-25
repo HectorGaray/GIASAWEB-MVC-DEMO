@@ -1,0 +1,58 @@
+﻿@model ProyectoGiasaWeb.Models.Prospectos
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<h2>Eliminar</h2>
+
+<h4>¿Estas Seguro De Eliminar Este Registro?</h4>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombrepros)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.nombrepros)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ap_materno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ap_materno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ap_paterno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ap_paterno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.direccion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.direccion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.correo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.correo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.empresa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.empresa)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="idProspecto" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> ||
+        <a asp-action="Index" class="btn btn-primary">Regresar A La Lista</a>
+    </form>
+</div>

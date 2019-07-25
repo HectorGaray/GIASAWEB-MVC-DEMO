@@ -1,0 +1,64 @@
+﻿@model ProyectoGiasaWeb.Models.Indirecto
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<h2>Eliminar Un Indirecto</h2>
+
+<h4>¿Estas Seguro De Eliminar Este Registro?</h4>
+<div>
+    <h4>Indirecto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.horas)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.horas)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.minutos)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.minutos)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.importe)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.importe)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.subtotalP)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.subtotalP)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.insumoV)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.insumoV)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.materialV)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.materialV)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.subtotalV)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.subtotalV)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="idIndirecto" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> | |
+        <a asp-action="Index" class="btn btn-primary">Regresar A La Lista</a>
+    </form>
+</div>

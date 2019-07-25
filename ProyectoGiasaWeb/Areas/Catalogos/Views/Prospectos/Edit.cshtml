@@ -1,0 +1,57 @@
+﻿@model ProyectoGiasaWeb.Models.Prospectos
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<h2>Editar Prospecto</h2>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="idProspecto" />
+            <div class="form-group">
+                <label asp-for="nombrepros" class="control-label"></label>
+                <input asp-for="nombrepros" class="form-control" />
+                <span asp-validation-for="nombrepros" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ap_materno" class="control-label"></label>
+                <input asp-for="ap_materno" class="form-control" />
+                <span asp-validation-for="ap_materno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ap_paterno" class="control-label"></label>
+                <input asp-for="ap_paterno" class="form-control" />
+                <span asp-validation-for="ap_paterno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="direccion" class="control-label"></label>
+                <input asp-for="direccion" class="form-control" />
+                <span asp-validation-for="direccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="correo" class="control-label"></label>
+                <input asp-for="correo" class="form-control" />
+                <span asp-validation-for="correo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="empresa" class="control-label"></label>
+                <input asp-for="empresa" class="form-control" />
+                <span asp-validation-for="empresa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-primary">Regresar A La Lista</a>
+</div>
+

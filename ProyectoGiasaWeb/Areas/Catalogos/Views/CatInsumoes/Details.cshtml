@@ -1,0 +1,31 @@
+﻿@model ProyectoGiasaWeb.Models.CatInsumo
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<h2>Detalles de Insumo</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.insumo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.insumo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.costohr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.costohr)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.idCatinsumo" class="btn btn-info">Editar</a> |
+    <a asp-action="Index" class="btn btn-primary">Regresar A La Lista</a>
+</div>

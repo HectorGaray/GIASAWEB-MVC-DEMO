@@ -1,0 +1,82 @@
+﻿@page
+@model RegistrarModel
+@{
+}
+<center><h3> Registrar</h3></center>
+<div class="card">
+    <div class="card-header">
+        <h6>Ingresa los datos del nuevo usuario del sistema:</h6>
+    </div>
+    <div class="card-body">
+
+
+        <div class="container" id="">
+            <form method="post" enctype="multipart/form-data">
+
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label asp-for="Input.Nombre" class="control-label"></label>
+                            <input asp-for="Input.Nombre" class="form-control" id="nombre" />
+                            <span asp-validation-for="Input.Nombre" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col">
+
+                        <div class="form-group">
+                            <label asp-for="Input.Apellido" class="control-label"></label>
+                            <input asp-for="Input.Apellido" class="form-control" id="Apellido" />
+                            <span asp-validation-for="Input.Apellido" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label asp-for="Input.NID" class="control-label"></label>
+                            <input asp-for="Input.NID" class="form-control" id="NID" />
+                            <span asp-validation-for="Input.NID" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label asp-for="Input.Email" class="control-label"></label>
+                            <input asp-for="Input.Email" class="form-control" id="Email" />
+                            <span asp-validation-for="Input.Email" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label asp-for="Input.Password" class="control-label"></label>
+                            <input asp-for="Input.Password" class="form-control" id="Contraseña" />
+                            <span asp-validation-for="Input.Password" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+
+                            <label class="control-label">Rol del usuario:</label>
+                            @Html.DropDownList("Input.Role", new SelectList(Model.Input.rolesLista, "Text", "Text"), "Selecciona un role", new { @class = "form-control" })
+
+                        </div>
+                    </div>
+                    <label id="Message" class="text-danger">@Html.DisplayFor(m => m.Input.ErrorMessage)</label>
+
+                </div>
+                <center>
+                    <button type="submit" class="btn btn-primary">
+                        Guardar
+                    </button>
+                    
+                </center>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+
+}

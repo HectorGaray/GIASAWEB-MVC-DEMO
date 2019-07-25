@@ -1,0 +1,37 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<div class="jumbotron text-center">
+    <img src="~/images/GIASA2_Mesa de trabajo 1.png" width="150" alt="">
+    <h2>Bienvenido</h2>
+    <pc class="align-content-center">Sistema de cotizador para cotizaciones para GIASA</pc>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <img src="~/images/banner1/analytics.png" class="rounded float-right" />
+            <h3>Catalogo Cotizaciones</h3>
+
+            <p>Capture una nueva cotizacion para un cliente</p>
+            <a asp-area="Catalogos" asp-controller="Catalogos" asp-action="Index" class="btn btn-primary btn-lg btn-block">Ver Catalogo</a>
+        </div>
+        <div class="col-sm-4">
+            <img src="~/images/banner1/calculator.png" class="rounded float-right" />
+            <h3>Nueva Cotizacion</h3>
+
+            <p>Capture una nueva cotizacion para un cliente</p>
+            <button type="button" class="btn btn-primary btn-lg btn-block">Nueva Cotizacion</button>
+        </div>
+        <div class="col-sm-4">
+            <img src="~/images/banner1/barcode.png" class="rounded float-right" />
+            <h3>Listado De Productos</h3>
+
+            <p>Capture una nueva cotizacion para un cliente</p>
+            <a asp-area="Catalogos" asp-controller="Productoes" asp-action="Index" class="btn btn-primary btn-lg btn-block">Ver Listado</a>
+        </div>
+    </div>
+</div>

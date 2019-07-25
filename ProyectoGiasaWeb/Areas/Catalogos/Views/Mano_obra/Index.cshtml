@@ -1,0 +1,90 @@
+﻿@model IEnumerable<ProyectoGiasaWeb.Models.Mano_obra>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<h2>Mano De Obra</h2>
+<hr />
+<p>
+    <a asp-action="Create" class="btn btn-primary">Nueva Mano de Obra</a>
+</p>
+<table class="table table-hover">
+    <thead class="thead-dark">
+ 
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.minDiseno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.costoDiseño)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.minPrensa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.costoPren)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.minFoliador)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.minterminado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.costoFolio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.costoTerminado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.subtotal)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.minDiseno)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.costoDiseño)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.minPrensa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.costoPren)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.minFoliador)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.minterminado)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.costoFolio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.costoTerminado)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.subtotal)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.idmano" class="btn btn-outline-primary">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.idmano" class="btn btn-outline-info">Detalles</a> |
+                    
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <a asp-action="Regresa" class="btn btn-primary">Atras</a>
+</div>

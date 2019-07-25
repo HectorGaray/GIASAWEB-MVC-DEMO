@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ProyectoGiasaWeb.Areas.Usuarios.Models.TUsuarios>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<h2>Usuarios del Sistema</h2>
+
+<p>
+    <a asp-area="Usuarios" asp-page="/Registrar/Registrar" class="btn btn-primary btn-lg">Nuevo Usuario</a>
+</p>
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NID)
+            </th>
+            <th>
+                Correo usuario
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NID)
+            </td>
+            <td>
+                Correo
+            </td>
+            
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-outline-warning">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.ID" class="btn btn-outline-info">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-outline-danger">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

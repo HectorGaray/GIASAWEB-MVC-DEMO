@@ -1,0 +1,61 @@
+﻿@model ProyectoGiasaWeb.Models.Indirecto
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<h2>Editar Indirecto</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="idIndirecto" />
+            <div class="form-group">
+                <label asp-for="horas" class="control-label"></label>
+                <input asp-for="horas" class="form-control" />
+                <span asp-validation-for="horas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="minutos" class="control-label"></label>
+                <input asp-for="minutos" class="form-control" />
+                <span asp-validation-for="minutos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="importe" class="control-label"></label>
+                <input asp-for="importe" class="form-control" />
+                <span asp-validation-for="importe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="subtotalP" class="control-label"></label>
+                <input asp-for="subtotalP" class="form-control" />
+                <span asp-validation-for="subtotalP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="insumoV" class="control-label"></label>
+                <input asp-for="insumoV" class="form-control" />
+                <span asp-validation-for="insumoV" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="materialV" class="control-label"></label>
+                <input asp-for="materialV" class="form-control" />
+                <span asp-validation-for="materialV" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="subtotalV" class="control-label"></label>
+                <input asp-for="subtotalV" class="form-control" />
+                <span asp-validation-for="subtotalV" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-primary">Regresar A La Lista</a>
+</div>
+

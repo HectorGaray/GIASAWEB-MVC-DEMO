@@ -1,0 +1,76 @@
+﻿@model IEnumerable<ProyectoGiasaWeb.Models.Indirecto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<h2>Catalogos Indirectos</h2>
+<hr />
+<p>
+    <a asp-action="Create" class="btn btn-primary">Nuevo Indirectos</a>
+</p>
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.horas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.minutos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.importe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.subtotalP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.insumoV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.materialV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.subtotalV)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.horas)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.minutos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.importe)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.subtotalP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.insumoV)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.materialV)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.subtotalV)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.idIndirecto" class="btn btn-outline-primary">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.idIndirecto" class="btn btn-outline-info">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@item.idIndirecto" class="btn btn-outline-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div>
+    <a asp-action="Regresa" class="btn btn-primary"> Atras</a>
+</div>

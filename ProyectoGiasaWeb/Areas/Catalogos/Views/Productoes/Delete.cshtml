@@ -1,0 +1,28 @@
+﻿@model ProyectoGiasaWeb.Models.Producto
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<h2>Eliminar</h2>
+
+<h4>¿Estas Seguro De Eliminar Este Registro?</h4>
+<div>
+    <h4>Producto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.desProducto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.desProducto)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="idProducto" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> | |
+        <a asp-action="Index" class="btn btn-primary">Regresar A La Lista</a>
+    </form>
+</div>

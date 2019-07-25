@@ -1,0 +1,108 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - GIASAWEB</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          
+   asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Cotizador Giasa</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li id="enlace1" class="nav-item">
+                    <a class="nav-link" asp-area="Principal" asp-controller="Principal" asp-action="Index">Inicio </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cotizaciones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Listado de Cotizaciones</a>
+                </li>
+                <li id="enlace2" class="nav-item">
+                    <a class="nav-link" asp-area="Usuarios" asp-controller="Usuarios" asp-action="Index">Control Usuarios</a>
+                </li>
+                <li id="enlace3" class="nav-item">
+                    <a class="nav-link" asp-area="Catalogos" asp-controller="Catalogos" asp-action="Index">Catalogos</a>
+                </li>
+                <li id="enlace4" class="nav-item">
+                    <a class="nav-link" asp-area="Materiales" asp-controller="Materiales" asp-action="Index">Materiales y Maquinas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="Usuarios" asp-controller="Usuarios" asp-action="SessionClose">
+                        Salir
+                    </a>
+                </li>
+
+            </ul>
+
+            <span class="navbar-text">
+                <img id="userdefecto" class="rounded" src="~/images/banner1/userdefecto.png" />
+                <a>@UserManager.GetUserName(User)</a>
+
+
+                @if (SignInManager.IsSignedIn(User))
+                {<a class="espacio">
+                        @User.Claims.FirstOrDefault(u => u.Type.Equals("http://schemas.microsoft.com/ws/2008/06/identity/claims/role")).Value
+                    </a>
+                }
+
+            </span>
+            
+        </div>
+    </nav>
+
+    <partial name="_CookieConsentPartial" />
+
+    <div class="container body-content">
+        @RenderBody()
+
+
+    </div>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/Principal.js" asp-append-version="true"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

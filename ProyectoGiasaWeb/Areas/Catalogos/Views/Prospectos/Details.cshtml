@@ -1,0 +1,56 @@
+﻿@model ProyectoGiasaWeb.Models.Prospectos
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<h2>Detalles De Prospecto</h2>
+
+<div>
+    <h4>Prospectos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombrepros)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.nombrepros)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ap_materno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ap_materno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ap_paterno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ap_paterno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.direccion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.direccion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.correo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.correo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.empresa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.empresa)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.idProspecto" class="btn btn-info">Editar</a>|
+    <a asp-action="Index" class="btn btn-primary">Regresar A La Lista</a>
+</div>

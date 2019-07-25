@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<center><h2>Materiales</h2></center>
+
+<div class="row">
+    <div class="col">
+        <div class="card border-dark mb-3" style="max-width: 18rem;">
+            <div class="card-header"><center><h5>Listado de Papel</h5></center></div>
+            <div class="card-body text-dark">
+                <h5 class="card-title">Papel</h5>
+                <p class="card-text">Agregar, Actualiza,Visualiza o Elimina Un Papel </p>
+                <a asp-area="Catalogos" asp-controller="Papels" asp-action="Index" class="btn btn-primary btn-lg btn-block">Ver Listado</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card border-dark mb-3" style="max-width: 18rem;">
+            <div class="card-header"><center><h5>Maquinaria </h5></center></div>
+            <div class="card-body text-dark">
+                <h5 class="card-title">Indirectos</h5>
+                <p class="card-text">Agregar, Actualiza,Visualiza o Elimina Un Maquinaria</p>
+                <a asp-area="Catalogos" asp-controller="" asp-action="Index" class="btn btn-primary btn-lg btn-block">Ver Listado</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+       
+    </div>
+</div>

@@ -1,0 +1,76 @@
+﻿@model ProyectoGiasaWeb.Models.Mano_obra
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<h2>Eliminar Mano De Obra</h2>
+
+<h4>¿Estas Seguro De Eliminar Este Registro?</h4>
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.minDiseno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.minDiseno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.costoDiseño)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.costoDiseño)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.minPrensa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.minPrensa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.costoPren)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.costoPren)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.minFoliador)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.minFoliador)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.minterminado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.minterminado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.costoFolio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.costoFolio)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.costoTerminado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.costoTerminado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.subtotal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.subtotal)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="idmano" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> | |
+        <a asp-action="Index" class="btn btn-primary">Regresar A La Lista</a>
+    </form>
+</div>
